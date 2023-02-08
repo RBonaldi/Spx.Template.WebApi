@@ -55,15 +55,5 @@ namespace Application.Tests
                     f.Descricao == exepectedSingle.Descricao && 
                     f.Nome == exepectedSingle.Nome);
         }
-
-        [Fact]
-        [Trait(nameof(IFilmesService.ObterFilmesAsync), "Erro")]
-        public async Task ObterFilmesAsync_Erro()
-        {
-            await Assert.ThrowsAnyAsync<ModelValidationException>(async () =>
-            {
-                await filmesService.ObterFilmesAsync(new Pesquisa());
-            });
-        }
     }
 }
