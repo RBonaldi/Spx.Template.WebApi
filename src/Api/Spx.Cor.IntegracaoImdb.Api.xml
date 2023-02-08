@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Spx.Cor.IntegracaoImdb.Api</name>
+    </assembly>
+    <members>
+        <member name="M:Tmbd.Api.Controllers.FilmesController.GetFilmesAsync(Api.Dtos.FilmesGet)">
+            <summary>
+            Pesquisa por filmes.
+            </summary>
+            <param name="filmesGet">
+                Criterios de pesquisa na base de filmes.
+            </param>
+            <response code="200">Lista de resultados.</response>
+            <response code="400">
+                Parametros incorretos ou limite de utilização excedido.
+            </response>
+            <response code="500">Erro interno.</response>
+        </member>
+        <member name="P:Api.Dtos.FilmesGet.TermoPesquisa">
+            <summary>
+            Termo a ser pesquisado.
+            </summary>
+        </member>
+        <member name="P:Api.Dtos.FilmesGet.AnoLancamento">
+            <summary>
+            Ano de lançamento.
+            </summary>
+        </member>
+        <member name="P:Api.Dtos.FilmesGetResult.Id">
+            <summary>
+            Identificador do filme no The Moview Database.
+            </summary>
+        </member>
+        <member name="P:Api.Dtos.FilmesGetResult.Nome">
+            <summary>
+            Nome do filme.
+            </summary>
+        </member>
+        <member name="P:Api.Dtos.FilmesGetResult.Descricao">
+            <summary>
+            Descricao/Resumo do filme.
+            </summary>
+        </member>
+        <member name="P:Api.Dtos.FilmesGetResult.DataLancamento">
+            <summary>
+            Data de lancamento do filme.
+            </summary>
+        </member>
+        <member name="T:Api.AutenticacaoStartup">
+            <summary>
+            Autenticação.
+            </summary>
+        </member>
+        <member name="T:Api.NomeCustomizadoControllerFilter">
+            <summary>
+            Filtro para customizar o nome do controller/recurso no Swagger
+            </summary>
+        </member>
+        <member name="T:Api.OAuth2ActionFilter">
+            <summary>
+            Filtro para incluir segurança oauth2 nas actions necessários no Swagger
+            </summary>
+        </member>
+    </members>
+</doc>
